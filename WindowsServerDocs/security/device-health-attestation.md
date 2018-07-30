@@ -236,15 +236,15 @@ Set-DHASActiveSigningCertificate -Thumbprint "<hex>" -Force
 
 > **Note:** This certificate must be deployed on the server running the DHA service in the **LocalMachine\My** certificate store. When the active signing certificate is set, the existing active signing certificate is moved to the list of inactive signing certificates.
 
-### List the inactive signing certificates
+### List the inactive signing certificate
 ```
-Get-DHASInactiveSigningCertificates
+Get-DHASInactiveSigningCertificate
 ```
 
-### Remove any inactive signing certificates
+### Remove any inactive signing certificate
 ```
-Remove-DHASInactiveSigningCertificates -Force
-Remove-DHASInactiveSigningCertificates  -Thumbprint "<hex>" -Force
+Remove-DHASInactiveSigningCertificate -Force
+Remove-DHASInactiveSigningCertificate  -Thumbprint "<hex>" -Force
 ```
 
 > **Note:** Only *one* inactive certificate (of any type) may exist in the service at any time. Certificates should be removed from the list of inactive certificates once they are no longer required.
@@ -265,16 +265,16 @@ The certificate must be deployed on the device in the **LocalMachine\My** certif
 
 When the active encryption certificate is set, the existing active encryption certificate is moved to the list of inactive encryption certificates.
 
-### List the inactive encryption certificates
+### List the inactive encryption certificate
 
 ```
-Get-DHASInactiveEncryptionCertificates
+Get-DHASInactiveEncryptionCertificate
 ```
-### Remove any inactive encryption certificates
+### Remove any inactive encryption certificate
 
 ```
-Remove-DHASInactiveEncryptionCertificates -Force
-Remove-DHASInactiveEncryptionCertificates -Thumbprint "<hex>" -Force 
+Remove-DHASInactiveEncryptionCertificate -Force
+Remove-DHASInactiveEncryptionCertificate -Thumbprint "<hex>" -Force 
 ```
 
 ### Get the X509ChainPolicy configuration 
